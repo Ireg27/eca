@@ -16,4 +16,8 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
-});
+})->name('landpage');
+
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('pages.about');

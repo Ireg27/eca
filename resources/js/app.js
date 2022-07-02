@@ -4,13 +4,17 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 
-InertiaProgress.init()
+InertiaProgress.init({
+  showSpinner: true,
+})
 
 createInertiaApp({
   resolve: name => require(`./Pages/${name}`),
+  title: title => `ECA • ${title}`,
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
+      .mixin({methods: {route}})
       .mount(el)
   },
 })
