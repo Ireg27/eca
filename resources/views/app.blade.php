@@ -13,8 +13,13 @@
         @routes
         @vite('resources/js/app.js')
         @inertiaHead
+        <style>
+            .gradient {
+              background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+            }
+          </style>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans gradient leading-normal tracking-normal" style="height: 4000px">
         @inertia
     </body>
 </html>
