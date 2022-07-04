@@ -52,9 +52,11 @@
                             Log in
                         </Link>
 
-                        <Link :href="route('register')" class="ml-4 text-sm text-white underline">
-                            Register
-                        </Link>
+                        <Button class="ml-4 landpage-button px-4 py-2" :class="{ 'gradient': !view.topOfPage}">
+                            <Link :href="route('register')">
+                                Register
+                            </Link>
+                        </Button>
                     </div>
                     <div class="-mr-2 flex items-center sm:hidden">
                         <!-- Mobile menu button -->
@@ -134,6 +136,7 @@ import {
 } from "@headlessui/vue";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 import { Link } from "@inertiajs/inertia-vue3";
+import Button from '../Components/Button.vue';
 
 export default {
     components: {
