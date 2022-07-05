@@ -7,6 +7,7 @@ import Divider from './Divider.vue';
 import Steps from './Steps.vue';
 import Price from './Price.vue';
 import Support from './Support.vue';
+import Partners from './Partners.vue';
 
 defineProps({
     canLogin: Boolean,
@@ -24,6 +25,7 @@ defineProps({
       <Divider></Divider>
       <Steps></Steps>
       <Price></Price>
+      <Partners></Partners>
       <Support></Support>
     </Landpage>
 
