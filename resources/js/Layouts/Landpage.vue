@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <DisclosurePanel class="sm:hidden">
+            <DisclosurePanel class="sm:hidden bg-white text-black z-50">
                 <div class="pt-2 pb-3 space-y-1">
                     <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
                     <DisclosureButton
@@ -91,27 +91,27 @@
                     <DisclosureButton
                         as="a"
                         href="#"
-                        class="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                        class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                         >Team</DisclosureButton
                     >
                     <DisclosureButton
                         as="a"
                         href="#"
-                        class="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                        class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                         >Projects</DisclosureButton
                     >
                     <DisclosureButton
                         as="a"
                         href="#"
-                        class="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                        class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                         >Calendar</DisclosureButton
                     >
                 </div>
-                <div class="pt-4 pb-3 border-t border-gray-200">
-                    <Link :href="route('login')" class="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                <div class="pt-4 pb-3 border-t border-gray-200 z-30">
+                    <Link :href="route('login')" class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
                         Log in
                     </Link>
-                    <Link :href="route('register')" class="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                    <Link :href="route('register')" class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
                         Register
                     </Link>
                     <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="text-sm text-gray-700 underline">
@@ -121,6 +121,7 @@
             </DisclosurePanel>
         </Disclosure>
         <slot />
+        <Footer></Footer>
     </div>
 </template>
 
@@ -137,6 +138,7 @@ import {
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 import { Link } from "@inertiajs/inertia-vue3";
 import Button from '../Components/Button.vue';
+import Footer from '../Components/Footer.vue';
 
 export default {
     components: {
@@ -151,6 +153,7 @@ export default {
         MenuIcon,
         XIcon,
         Link,
+        Footer,
     },
     data () {
         return {

@@ -19,7 +19,7 @@
             }
           </style>
     </head>
-    <body class="font-sans gradient leading-normal tracking-normal" style="height: 4000px">
+    <body class="font-sans gradient leading-normal tracking-normal">
         @inertia
     </body>
 </html>
