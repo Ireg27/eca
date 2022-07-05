@@ -1,11 +1,12 @@
 <script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
-import Landpage from '../../Layouts/Landpage.vue'
-import Button from '../../Components/Button.vue'
-import Header from './Header.vue'
-import Divider from './Divider.vue'
-import Steps from './Steps.vue'
-import Price from './Price.vue'
+import Landpage from '../../Layouts/Landpage.vue';
+import Button from '../../Components/Button.vue';
+import Header from './Header.vue';
+import Divider from './Divider.vue';
+import Steps from './Steps.vue';
+import Price from './Price.vue';
+import Support from './Support.vue';
 
 defineProps({
     canLogin: Boolean,
@@ -23,6 +24,7 @@ defineProps({
       <Divider></Divider>
       <Steps></Steps>
       <Price></Price>
+      <Support></Support>
     </Landpage>
 
 </template>
