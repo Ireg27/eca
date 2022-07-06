@@ -11,6 +11,8 @@ import Partners from './Partners.vue';
 import Feature from './Feature.vue';
 import Testimonial from './Testimonial.vue';
 import Stats from './Stats.vue';
+import DividerReverse from './Divider-Reverse.vue';
+import Newsletter from './Newsletter.vue';
 
 defineProps({
     canLogin: Boolean,
@@ -22,7 +24,6 @@ defineProps({
 
 <template>
     <Head title="Welcome" />
-
     <Landpage>
       <Header></Header>
       <Divider></Divider>
@@ -33,6 +34,7 @@ defineProps({
       <Partners></Partners>
       <Stats></Stats>
       <Support></Support>
+      <DividerReverse></DividerReverse>
+      <Newsletter></Newsletter>
     </Landpage>
-
 </template>
