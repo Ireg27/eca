@@ -8,6 +8,9 @@ import Steps from './Steps.vue';
 import Price from './Price.vue';
 import Support from './Support.vue';
 import Partners from './Partners.vue';
+import Feature from './Feature.vue';
+import Testimonial from './Testimonial.vue';
+import Stats from './Stats.vue';
 
 defineProps({
     canLogin: Boolean,
@@ -25,7 +28,10 @@ defineProps({
       <Divider></Divider>
       <Steps></Steps>
       <Price></Price>
+      <Feature></Feature>
+      <Testimonial></Testimonial>
       <Partners></Partners>
+      <Stats></Stats>
       <Support></Support>
     </Landpage>
 

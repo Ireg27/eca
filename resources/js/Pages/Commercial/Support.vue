@@ -1,7 +1,5 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="bg-white">
-    <!-- Header -->
     <div class="relative pb-32 bg-gray-800">
       <div class="absolute inset-0">
         <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100" alt="" />
@@ -13,7 +11,6 @@
       </div>
     </div>
 
-    <!-- Overlapping cards -->
     <section class="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8" aria-labelledby="contact-heading">
       <h2 class="sr-only" id="contact-heading">Contact us</h2>
       <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
