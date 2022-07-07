@@ -9,7 +9,9 @@ module.exports = {
         './resources/js/**/*.vue',
         './resources/js/**/**/*.vue',
     ],
-
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
     theme: {
         extend: {
             fontFamily: {
