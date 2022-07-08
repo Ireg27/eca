@@ -24,9 +24,9 @@ Route::get('/', function () {
     ]);
 })->name('landpage');
 
-Route::get('/about', function () {
-    return Inertia::render('About');
-})->name('pages.about');
+Route::get('/team', function () {
+    return Inertia::render('Commercial/Team');
+})->name('pages.team');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

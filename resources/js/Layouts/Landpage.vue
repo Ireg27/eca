@@ -25,7 +25,7 @@
                                 Dashboard
                             </Link>
                             <Link
-                                href="#"
+                                :href="route('pages.team')"
                                 class="text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
                                 :class="{'border-b-2 border-indigo-500': $page.component === 'todo'}"
                             >
@@ -39,7 +39,7 @@
                                 Projects
                             </Link>
                             <Link
-                                :href="route('pages.about')"
+                                href="#"         
                                 class="text-white hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
                                 :class="{'border-b-2 border-indigo-500': $page.component === 'About'}"
                             >
@@ -84,7 +84,7 @@
                     <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
                     <DisclosureButton
                         as="a"
-                        href="#"
+                       :href="route('login')"
                         class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                         >Dashboard</DisclosureButton
                     >
