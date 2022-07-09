@@ -5,45 +5,44 @@
                 <div class="flex justify-between h-16">
                     <div class="flex">
                         <div class="flex-shrink-0 flex items-center">
+                            <Link
+                                :href="route('landpage')">
                             <img
-                                class="block lg:hidden h-8 w-auto"
+                                class="block lg:hidden h-8 w-auto cursor-pointer"
                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                                 alt="Workflow"
                             />
+                            </Link>
+                             <Link
+                                :href="route('landpage')">
                             <img
-                                class="hidden lg:block h-8 w-auto"
+                                class="hidden lg:block h-8 w-auto cursor-pointer"
                                 src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-900-text.svg"
                                 alt="Workflow"
                             />
+                            </Link>
                         </div>
                         <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                             <Link
-                                :href="route('landpage')"
-                                class="text-white inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-2 border-indigo-500': $page.component === 'Welcome'}"
-                            >
-                                Dashboard
-                            </Link>
-                            <Link
                                 :href="route('pages.team')"
-                                class="text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-2 border-indigo-500': $page.component === 'todo'}"
+                                class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
+                                :class="{'border-b-4 border-indigo-500': $page.component === 'Commercial/Team'}"
                             >
                                 Team
                             </Link>
                             <Link
                                 href="#"
-                                class="text-white hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-2 border-indigo-500': $page.component === 'todo'}"
+                                class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
+                                :class="{'border-b-4 border-indigo-500': $page.component === 'todo'}"
                             >
-                                Projects
+                                About
                             </Link>
                             <Link
                                 href="#"         
-                                class="text-white hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-2 border-indigo-500': $page.component === 'About'}"
+                                class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
+                                :class="{'border-b-4 border-indigo-500': $page.component === 'About'}"
                             >
-                                About
+                                FAQ
                             </Link>
                         </div>
                     </div>
@@ -57,6 +56,11 @@
                                 Register
                             </Link>
                         </Button>
+                    </div>
+                    <div v-else class="hidden sm:ml-6 sm:flex sm:items-center">
+                        <Link :href="route('dashboard')" class="text-sm text-white underline">
+                            Dashboard
+                        </Link>
                     </div>
                     <div class="-mr-2 flex items-center sm:hidden">
                         <!-- Mobile menu button -->
@@ -84,27 +88,22 @@
                     <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
                     <DisclosureButton
                         as="a"
-                       :href="route('login')"
-                        class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-                        >Dashboard</DisclosureButton
-                    >
-                    <DisclosureButton
-                        as="a"
-                        href="#"
+                        :href="route('pages.team')"
                         class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                        :class="{'bg-indigo-50 border-indigo-500 text-indigo-700': $page.component === 'Commercial/Team'}"
                         >Team</DisclosureButton
                     >
                     <DisclosureButton
                         as="a"
                         href="#"
                         class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-                        >Projects</DisclosureButton
+                        >About</DisclosureButton
                     >
                     <DisclosureButton
                         as="a"
                         href="#"
                         class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-                        >Calendar</DisclosureButton
+                        >FAQ</DisclosureButton
                     >
                 </div>
                 <div class="pt-4 pb-3 border-t border-gray-200 z-30">
@@ -152,6 +151,7 @@ export default {
         BellIcon,
         MenuIcon,
         XIcon,
+        Button,
         Link,
         Footer,
     },

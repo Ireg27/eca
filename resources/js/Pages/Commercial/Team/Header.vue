@@ -1,3 +1,13 @@
+<script>
+import { ChevronRightIcon } from "@heroicons/vue/outline";
+
+export default {
+  components: {
+    ChevronRightIcon
+  }
+}
+</script>
+
 <template>
     <div class="relative overflow-hidden">
       <main>
