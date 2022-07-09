@@ -2,17 +2,17 @@
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import Landpage from '../../Layouts/Landpage.vue';
 import Button from '../../Components/Button.vue';
-import Header from './Header.vue';
-import Divider from './Divider.vue';
-import Steps from './Steps.vue';
-import Price from './Price.vue';
-import Support from './Support.vue';
-import Partners from './Partners.vue';
-import Feature from './Feature.vue';
-import Testimonial from './Testimonial.vue';
-import Stats from './Stats.vue';
-import DividerReverse from './Divider-Reverse.vue';
-import Newsletter from './Newsletter.vue';
+import Header from './Home/Header.vue';
+import Divider from './Home/Divider.vue';
+import Steps from './Home/Steps.vue';
+import Price from './Home/Price.vue';
+import Support from './Home/Support.vue';
+import Partners from './Home/Partners.vue';
+import Feature from './Home/Feature.vue';
+import Testimonial from './Home/Testimonial.vue';
+import Stats from './Home/Stats.vue';
+import DividerReverse from './Home/Divider-Reverse.vue';
+import Newsletter from './Home/Newsletter.vue';
 
 defineProps({
     canLogin: Boolean,

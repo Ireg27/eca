@@ -17,12 +17,12 @@
             </p>
           </div>
           <div class="w-full sm:w-1/2 p-6">
-                <img src="../../Assets/steps.svg" alt="steps" class="w-3/4">
+                <img src="@/Assets/steps.svg" alt="steps" class="w-3/4">
           </div>
         </div>
         <div class="flex flex-wrap flex-col-reverse sm:flex-row">
           <div class="w-full sm:w-1/2 p-6 mt-6">
-                <img src="../../Assets/connected.svg" alt="steps" class="w-3/4">
+                <img src="@/Assets/connected.svg" alt="steps" class="w-3/4">
           </div>
           <div class="w-full sm:w-1/2 p-6 mt-6">
             <div class="align-middle">
