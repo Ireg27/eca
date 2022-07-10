@@ -33,14 +33,14 @@
                             <Link
                                 :href="route('pages.about')"
                                 class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-4 border-indigo-500': $page.component === 'todo'}"
+                                :class="{'border-b-4 border-indigo-500': $page.component === 'Commercial/About'}"
                             >
                                 About
                             </Link>
                             <Link
                                 :href="route('pages.faq')"         
                                 class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-4 border-indigo-500': $page.component === 'About'}"
+                                :class="{'border-b-4 border-indigo-500': $page.component === 'Commercial/Faq'}"
                             >
                                 FAQ
                             </Link>

@@ -17,7 +17,7 @@
 <template>
 <div class="bg-slate-800 w-full h-[64px]"></div>
   <div class="bg-gray-50">
-    <div class="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 sm:py-12 lg:px-4">
+    <div class="max-w-7xl mx-auto py-24 sm:px-2 sm:py-12 lg:px-4">
       <div class="max-w-2xl mx-auto px-4 lg:max-w-none">
         <div class="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
           <div>
