@@ -28,6 +28,10 @@ Route::get('/team', function () {
     return Inertia::render('Commercial/Team');
 })->name('pages.team');
 
+Route::get('/faq', function () {
+    return Inertia::render('Commercial/Faq');
+})->name('pages.faq');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
