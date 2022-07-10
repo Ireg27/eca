@@ -31,7 +31,7 @@
                                 Team
                             </Link>
                             <Link
-                                href="#"
+                                :href="route('pages.about')"
                                 class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
                                 :class="{'border-b-4 border-indigo-500': $page.component === 'todo'}"
                             >
@@ -95,7 +95,7 @@
                     >
                     <DisclosureButton
                         as="a"
-                        href="#"
+                        :href="route('pages.about')"
                         class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                         >About</DisclosureButton
                     >
