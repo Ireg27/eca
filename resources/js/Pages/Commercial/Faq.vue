@@ -4,6 +4,7 @@ import { reactive } from "vue";
 import Landpage from "../../Layouts/Landpage.vue";
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/outline'
+import Divider from "./Home/Divider.vue";
 
 const state = reactive({
     tabs: [
@@ -65,7 +66,7 @@ function onChange(tabName) {
 <template>
     <Head title="FAQ" />
     <Landpage>
-        <div class="pt-[50px] md:pt-12 lg:pt-1">
+        <div class="pt-[50px] md:pt-12 lg:pt-1 pb-14">
             <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24 lg:pb-[50px]">
                 <div class="sm:hidden">
                     <label for="tabs" class="sr-only">Select a tab</label>
@@ -122,6 +123,7 @@ function onChange(tabName) {
                 </div>
             </div>
         </div>
+        <Divider></Divider>
         <div class="bg-gray-50">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
