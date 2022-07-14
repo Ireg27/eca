@@ -44,6 +44,13 @@
                             >
                                 FAQ
                             </Link>
+                            <Link
+                                :href="route('pages.contact')"         
+                                class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
+                                :class="{'border-b-4 border-indigo-500': $page.component === 'Commercial/Contact'}"
+                            >
+                                Contact
+                            </Link>
                         </div>
                     </div>
                     <div v-if="! $page.props.auth.user" class="hidden sm:ml-6 sm:flex sm:items-center">
@@ -97,13 +104,22 @@
                         as="a"
                         :href="route('pages.about')"
                         class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                        :class="{'bg-indigo-50 border-indigo-500 text-indigo-700': $page.component === 'Commercial/About'}"
                         >About</DisclosureButton
                     >
                     <DisclosureButton
                         as="a"
                         :href="route('pages.faq')"
                         class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                        :class="{'bg-indigo-50 border-indigo-500 text-indigo-700': $page.component === 'Commercial/Faq'}"
                         >FAQ</DisclosureButton
+                    >
+                    <DisclosureButton
+                        as="a"
+                        :href="route('pages.contact')"
+                        class="border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                        :class="{'bg-indigo-50 border-indigo-500 text-indigo-700': $page.component === 'Commercial/Contact'}"
+                        >Contact</DisclosureButton
                     >
                 </div>
                 <div class="pt-4 pb-3 border-t border-gray-200 z-30">

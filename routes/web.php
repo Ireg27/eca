@@ -36,6 +36,10 @@ Route::get('/about', function () {
     return Inertia::render('Commercial/About');
 })->name('pages.about');
 
+Route::get('/contact', function () {
+    return Inertia::render('Commercial/Contact');
+})->name('pages.contact');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
