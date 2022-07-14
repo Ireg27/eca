@@ -7,7 +7,11 @@ import { Link } from '@inertiajs/inertia-vue3';
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
         <div>
             <Link href="/">
-                <BreezeApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
+                <img
+                                class="block h-20 w-auto cursor-pointer"
+                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                alt="Workflow"
+                            />
             </Link>
         </div>
 
