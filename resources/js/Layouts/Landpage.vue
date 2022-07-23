@@ -17,7 +17,7 @@
                                 :href="route('landpage')">
                             <img
                                 class="hidden lg:block h-8 w-auto cursor-pointer"
-                                src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-900-text.svg"
+                                src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
                                 alt="Workflow"
                             />
                             </Link>
@@ -26,28 +26,28 @@
                             <Link
                                 :href="route('pages.team')"
                                 class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-4 border-indigo-500': $page.component === 'Commercial/Team'}"
+                                :class="{'border-b-4 border-indigo-500' : $page.component === 'Commercial/Team'}"
                             >
                                 Team
                             </Link>
                             <Link
                                 :href="route('pages.about')"
                                 class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-4 border-indigo-500': $page.component === 'Commercial/About'}"
+                                :class="{'border-b-4 border-indigo-500' : $page.component === 'Commercial/About'}"
                             >
                                 About
                             </Link>
                             <Link
                                 :href="route('pages.faq')"         
                                 class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-4 border-indigo-500': $page.component === 'Commercial/Faq'}"
+                                :class="{'border-b-4 border-indigo-500' : $page.component === 'Commercial/Faq'}"
                             >
                                 FAQ
                             </Link>
                             <Link
                                 :href="route('pages.contact')"         
                                 class="text-white hover:text-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium"
-                                :class="{'border-b-4 border-indigo-500': $page.component === 'Commercial/Contact'}"
+                                :class="{'border-b-4 border-indigo-500' : $page.component === 'Commercial/Contact'}"
                             >
                                 Contact
                             </Link>
