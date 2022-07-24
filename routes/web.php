@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -44,8 +45,13 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/admin/dashboard', function () {
-    return Inertia::render('AdminPanel/Dashboard');
-})->middleware(['auth', 'verified'])->name('adminpanel.dashboard');
+
+Route::prefix('admin')->middleware(['auth', 'verified'])->group(function() {
+    Route::get('/dashboard', function () {
+        return Inertia::render('AdminPanel/Dashboard');
+    })->name('adminpanel.dashboard');
+    Route::get('/roles', [RoleController::class, 'index'])->name('adminpanel.roles');
+});
+
 
 require __DIR__.'/auth.php';
