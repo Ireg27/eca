@@ -1,11 +1,4 @@
 <template>
-  <!--
-    This example requires updating your template:
-    ```
-    <html class="h-full bg-white">
-    <body class="h-full">
-    ```
-  -->
   <div>
     <TransitionRoot as="template" :show="sidebarOpen">
       <Dialog as="div" class="relative z-40 md:hidden" @close="sidebarOpen = false">
@@ -59,12 +52,12 @@
         <div class="flex-shrink-0 px-4 flex items-center">
           <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-900-text.svg" alt="Workflow" />
         </div>
-        <div class="flex-grow mt-5">
+        <div class="flex-grow mt-5" >
           <div class="space-y-1">
-            <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[$page.component === item.current ? 'bg-indigo-50 border-indigo-500 text-indigo-500' : 'border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50', 'group border-l-4 py-2 px-3 flex items-center text-sm font-medium']">
+            <Link :href="route(item.href)" v-for="item in navigation" :key="item.name" :class="[$page.component === item.current ? 'bg-indigo-50 border-indigo-500 text-indigo-500' : 'border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50', 'group border-l-4 py-2 px-3 flex items-center text-sm font-medium']">
               <component :is="item.icon" :class="[$page.component === item.current ? 'text-indigo-500' : 'text-gray-400 group-hover:text-gray-500', 'mr-3 flex-shrink-0 h-6 w-6']" aria-hidden="true" />
               {{ item.name }}
-            </a>
+            </Link>
           </div>
         </div>
         <div class="flex-shrink-0 block w-full">
@@ -77,7 +70,7 @@
     </div>
 
     <div class="md:pl-64 h-full bg-white">
-       <div class="sticky top-0 z-10 flex-shrink-0 h-16 bg-white border-b border-gray-200 flex visible sm:hidden">
+       <div class="sticky top-0 z-10 flex-shrink-0 h-16 bg-white border-b border-gray-200 flex visible md:hidden">
           <button type="button" class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden" @click="sidebarOpen = true">
             <span class="sr-only">Open sidebar</span>
             <MenuAlt2Icon class="h-6 w-6" aria-hidden="true" />
@@ -108,15 +101,17 @@ import {
   MenuAlt2Icon
 } from '@heroicons/vue/outline'
 import { Dialog, DialogPanel, Switch, SwitchGroup, SwitchLabel, TransitionChild, TransitionRoot } from '@headlessui/vue'
+import { Link } from "@inertiajs/inertia-vue3"
+
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: ChartPieIcon, current: 'AdminPanel/Dashboard' },
-  { name: 'Permissions', href: '#', icon: AdjustmentsIcon, current: 'AdminPanel/Permissions' },
-  { name: 'Roles', href: '#', icon: IdentificationIcon, current: 'AdminPanel/Roles' },
-  { name: 'Categories', href: '#', icon: ColorSwatchIcon, current: 'AdminPanel/Categories' },
-  { name: 'Users', href: '#', icon: UsersIcon, current: 'AdminPanel/Users' },
-  { name: 'Landpage', href: '#', icon: PresentationChartLineIcon, current: 'AdminPanel/Landpage' },
-  { name: 'Feedback', href: '#', icon: AnnotationIcon, current: 'AdminPanel/Feedback' },
+  { name: 'Dashboard', href: 'adminpanel.dashboard', icon: ChartPieIcon, current: 'AdminPanel/Dashboard' },
+  { name: 'Permissions', href: 'adminpanel.dashboard', icon: AdjustmentsIcon, current: 'AdminPanel/Permissions' },
+  { name: 'Roles', href: 'adminpanel.roles', icon: IdentificationIcon, current: 'AdminPanel/Roles/Roles' },
+  { name: 'Categories', href: 'adminpanel.dashboard', icon: ColorSwatchIcon, current: 'AdminPanel/Categories' },
+  { name: 'Users', href: 'adminpanel.dashboard', icon: UsersIcon, current: 'AdminPanel/Users' },
+  { name: 'Landpage', href: 'adminpanel.dashboard', icon: PresentationChartLineIcon, current: 'AdminPanel/Landpage' },
+  { name: 'Feedback', href: 'adminpanel.dashboard', icon: AnnotationIcon, current: 'AdminPanel/Feedback' },
 ]
 
 document.body.classList.remove('gradient');
